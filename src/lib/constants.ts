@@ -1,6 +1,6 @@
 export const WHATSAPP_NUMBERS = [
   {
-    display: "068 856 234",
+    display: "068 856 1234",
     url: "https://wa.me/212688561234?text=Hola%2C%20me%20gustar%C3%ADa%20informaci%C3%B3n%20sobre%20las%20clases%20para%20mi%20hijo%2Fa",
   },
   {
