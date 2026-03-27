@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageCircle } from "lucide-react";
+import { MessageCircle, Palette, BookOpen, Gamepad2, Languages } from "lucide-react";
 import { WHATSAPP_NUMBERS } from "@/lib/constants";
 
 const activities = [
-  { icon: "🎨", title: "Talleres Creativos", desc: "Arte, manualidades y expresión" },
-  { icon: "📚", title: "Refuerzo Académico", desc: "Repasar lo importante del curso" },
-  { icon: "🎮", title: "Juegos Educativos", desc: "Aprender jugando en grupo" },
-  { icon: "🗣️", title: "Idiomas de Verano", desc: "Práctica de inglés y francés" },
+  { icon: Palette, title: "Talleres Creativos", desc: "Arte, manualidades y expresión" },
+  { icon: BookOpen, title: "Refuerzo Académico", desc: "Repasar lo importante del curso" },
+  { icon: Gamepad2, title: "Juegos Educativos", desc: "Aprender jugando en grupo" },
+  { icon: Languages, title: "Idiomas de Verano", desc: "Práctica de inglés y francés" },
 ];
 
 export const Summer = () => {
@@ -52,7 +52,9 @@ export const Summer = () => {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="rounded-xl border border-warm-border bg-white p-5 text-center"
             >
-              <span className="mb-2 block text-[32px]">{a.icon}</span>
+              <div className="mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-gold-light to-gold">
+                <a.icon className="h-6 w-6 text-navy-dark" />
+              </div>
               <h4 className="mb-1 text-sm font-semibold">{a.title}</h4>
               <p className="text-xs text-text-light">{a.desc}</p>
             </motion.div>

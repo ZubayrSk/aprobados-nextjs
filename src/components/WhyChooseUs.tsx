@@ -1,13 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Home, GraduationCap, UserCheck, BarChart3, Trophy } from "lucide-react";
 
 const differentiators = [
-  { icon: "🏠", title: "Ambiente de Confianza", desc: "Un espacio acogedor donde los alumnos se sienten cómodos para aprender y preguntar sin miedo" },
-  { icon: "👨‍🏫", title: "Expertos en el Currículo Español", desc: "Nuestros profesores conocen a fondo el sistema educativo español y sus requisitos específicos" },
-  { icon: "👤", title: "Atención Individualizada", desc: "Grupos pequeños para que cada alumno reciba el seguimiento y apoyo que necesita" },
-  { icon: "📊", title: "Seguimiento Continuo", desc: "Comunicación constante con las familias sobre el progreso y las áreas de mejora" },
-  { icon: "🏆", title: "Resultados que Hablan", desc: "Más de 500 alumnos han mejorado sus notas y aprobado con nosotros en la última década" },
+  { icon: Home, title: "Ambiente de Confianza", desc: "Un espacio acogedor donde los alumnos se sienten cómodos para aprender y preguntar sin miedo" },
+  { icon: GraduationCap, title: "Expertos en el Currículo Español", desc: "Nuestros profesores conocen a fondo el sistema educativo español y sus requisitos específicos" },
+  { icon: UserCheck, title: "Atención Individualizada", desc: "Grupos pequeños para que cada alumno reciba el seguimiento y apoyo que necesita" },
+  { icon: BarChart3, title: "Seguimiento Continuo", desc: "Comunicación constante con las familias sobre el progreso y las áreas de mejora" },
+  { icon: Trophy, title: "Resultados que Hablan", desc: "Más de 500 alumnos han mejorado sus notas y aprobado con nosotros en la última década" },
 ];
 
 export const WhyChooseUs = () => {
@@ -49,8 +50,8 @@ export const WhyChooseUs = () => {
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className="flex gap-4 rounded-xl border border-warm-border bg-warm-bg p-5"
               >
-                <div className="flex h-11 w-11 min-w-[44px] items-center justify-center rounded-lg bg-gradient-to-br from-gold-light to-gold text-xl">
-                  {d.icon}
+                <div className="flex h-11 w-11 min-w-[44px] items-center justify-center rounded-lg bg-gradient-to-br from-gold-light to-gold">
+                  <d.icon className="h-5 w-5 text-navy-dark" />
                 </div>
                 <div>
                   <h4 className="mb-1 text-[15px] font-semibold">{d.title}</h4>

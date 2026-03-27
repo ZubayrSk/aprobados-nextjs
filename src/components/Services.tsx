@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { BookOpen, Target, Globe, PenLine, Clock, Users } from "lucide-react";
 
 const services = [
-  { icon: "📖", title: "Tutorías Académicas", desc: "Clases personalizadas en todas las asignaturas del currículo español, adaptadas al ritmo de cada alumno" },
-  { icon: "🎯", title: "Preparación de Exámenes", desc: "Selectividad, Cambridge y pruebas oficiales. Simulacros reales y estrategias para maximizar resultados" },
-  { icon: "🌍", title: "Clases de Idiomas", desc: "Inglés, francés y árabe con profesores cualificados. Desde nivel básico hasta certificaciones oficiales" },
-  { icon: "📝", title: "Apoyo Escolar Diario", desc: "Ayuda con deberes, resolución de dudas y refuerzo en las materias que más cuestan" },
-  { icon: "⏰", title: "Horarios Flexibles", desc: "Mañanas, tardes y fines de semana. Adaptamos los horarios a la vida de tu familia" },
-  { icon: "👥", title: "Grupos Reducidos", desc: "Máximo 8 alumnos por grupo para garantizar atención individualizada y mejor aprendizaje" },
+  { icon: BookOpen, title: "Tutorías Académicas", desc: "Clases personalizadas en todas las asignaturas del currículo español, adaptadas al ritmo de cada alumno" },
+  { icon: Target, title: "Preparación de Exámenes", desc: "Selectividad, Cambridge y pruebas oficiales. Simulacros reales y estrategias para maximizar resultados" },
+  { icon: Globe, title: "Clases de Idiomas", desc: "Inglés, francés y árabe con profesores cualificados. Desde nivel básico hasta certificaciones oficiales" },
+  { icon: PenLine, title: "Apoyo Escolar Diario", desc: "Ayuda con deberes, resolución de dudas y refuerzo en las materias que más cuestan" },
+  { icon: Clock, title: "Horarios Flexibles", desc: "Mañanas, tardes y fines de semana. Adaptamos los horarios a la vida de tu familia" },
+  { icon: Users, title: "Grupos Reducidos", desc: "Máximo 8 alumnos por grupo para garantizar atención individualizada y mejor aprendizaje" },
 ];
 
 export const Services = () => {
@@ -35,7 +36,9 @@ export const Services = () => {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="rounded-xl border border-warm-border bg-white p-7 transition-all hover:-translate-y-0.5 hover:border-gold-dark hover:shadow-lg hover:shadow-black/[0.03]"
             >
-              <span className="mb-3.5 block text-[28px]">{srv.icon}</span>
+              <div className="mb-3.5 flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-gold-light to-gold">
+                <srv.icon className="h-5 w-5 text-navy-dark" />
+              </div>
               <h3 className="mb-1.5 text-base font-semibold">{srv.title}</h3>
               <p className="text-[13px] leading-relaxed text-text-light">{srv.desc}</p>
             </motion.div>
